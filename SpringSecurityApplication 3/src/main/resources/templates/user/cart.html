@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet" media="all"/>
+    <title>Корзина</title>
+</head>
+<body>
+<header>
+    <div class="grid_login">
+        <div class="item-1">
+            <h1>StarLight</h1>
+        </div>
+        <div class="item-2">
+            <img class="photo1" th:src="@{/resources/static/img/for_header.jpg}" alt="Изображение">
+        </div>
+        <div class="item-3">
+            <a class="h" href="/product">Главная</a>
+        </div>
+        <div class="item-4">
+            <a class="h" href="/index">Личный кабинет</a>
+        </div>
+    </div>
+</header>
+<h3>Корзина товаров</h3>
+<hr class="hr-horizontal-gradient">
+<div  class="ware">
+
+<div th:each="product : ${cart_product}">
+    <img class="photo2"  src="'/img/' + ${product.imageList[0].getFileName()}" width="300px" alt="Изображение">
+    <br>
+    <br>
+    <a class="car" th:href="@{/product/info/{id}(id=${product.getId()})}" th:text="${product.getTitle()}"></a>
+    <p class="descript"  th:text="'Цена: ' + ${product.getPrice()}"></p>
+    <a class="car" th:href="@{/cart/delete/{id}(id=${product.getId()})}">Удалить</a>
+    <hr class="hr-horizontal-gradient">
+</div>
+<h3 class="total" th:text="'Итоговая цена: ' + ${price}"></h3>
+<a class="car" href="/order/create">Оформить заказ</a>
+</div>
+<footer>
+    <div class="f">
+        <div>
+            Наш адрес: г. Нижний Новгород, 17 Сентября ул., д. 17
+        </div>
+        <div>
+            Телефон службы технической поддержки: +7 (981) 716-76-99, +7 (941) 707-60-18
+        </div>
+        <div>
+            Адрес электронной почты: liceilaunije-8344@mail.ru
+        </div>
+    </div>
+</footer>
+</body>
+</html>

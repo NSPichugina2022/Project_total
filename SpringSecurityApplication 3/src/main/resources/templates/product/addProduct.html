@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet" media="all"/>
+    <title>Добавление товара</title>
+</head>
+<body>
+<header>
+    <div class="grid_login">
+        <div class="item-1">
+            <h1>StarLight</h1>
+        </div>
+        <div class="item-2">
+            <img class="photo1" th:src="@{/resources/static/img/for_header.jpg}" alt="Изображение">
+        </div>
+        <div class="item-3">
+            <a class="h" href="/product">Главная</a>
+        </div>
+        <div class="item-4">
+            <a class="h" href="/admin">Личный кабинет</a>
+        </div>
+    </div>
+</header>
+<div class="append">
+    <div>
+<h3 th:align="center">Добавление товара</h3>
+    </div>
+<form th:method="POST" th:action="@{/admin/product/add}" th:object="${product}" enctype="multipart/form-data">
+    <div class="app">
+        <label for="title">Введите наименование: </label>
+    <input type="text" th:field="*{title}" placeholder="Наименование" id="title">
+    <div style="color: red" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></div>
+    </div>
+
+    <div class="app">
+    <label for="description">Введите описание: </label>
+    <textarea th:field="*{description}" placeholder="Описание" id="description"></textarea>
+    <div style="color: red" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></div>
+    </div>
+    <div class="app">
+    <label for="price">Введите цену: </label>
+    <input type="number" th:field="*{price}" min="1" step="0.00" id="price">
+    <div style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></div>
+    </div>
+
+    <div class="app">
+    <label for="category">Выберите категорию товара: </label>
+    <select name="category" th:field="*{category}" id="category">
+        <div th:each="element : ${category}">
+            <option th:text="${element.getName()}" th:value="${element.getId()}"></option>
+        </div>
+    </select>
+    </div>
+    <div class="app">
+    <p style="color: red">Вы можете добавить до 5 фотографий. Первая фотография не может быть пустой</p>
+    <input type="file" name="file_one">
+    <input type="file" name="file_two">
+    <input type="file" name="file_three">
+    <input type="file" name="file_four">
+    <input type="file" name="file_five">
+    <input type="submit" value="Добавить">
+    </div>
+</form>
+    </div>
+<footer>
+    <div class="f">
+        <div>
+            Наш адрес: г. Нижний Новгород, 17 Сентября ул., д. 17
+        </div>
+        <div>
+            Телефон службы технической поддержки: +7 (981) 716-76-99, +7 (941) 707-60-18
+        </div>
+        <div>
+            Адрес электронной почты: liceilaunije-8344@mail.ru
+        </div>
+    </div>
+</footer>
+</body>
+</html>

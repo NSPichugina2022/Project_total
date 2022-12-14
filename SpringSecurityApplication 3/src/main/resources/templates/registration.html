@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet" media="all"/>
+  <title>Регистрация</title>
+</head>
+<body>
+<header>
+  <div class="grid_login">
+    <div class="item-1">
+      <h1>StarLight</h1>
+    </div>
+    <div class="item-2">
+      <img class="photo1" th:src="@{/resources/static/img/for_header.jpg}" alt="Изображение">
+    </div>
+    <div class="item-3">
+      <a class="h" href="/product">Главная</a>
+    </div>
+  </div>
+</header>
+<div class="auth">
+<h3>Регистрация</h3>
+<form method="post" th:action="@{/auth/registration}" th:object="${person}">
+  <div>
+  <label for="login">Введите логин: </label>
+  </div>
+  <div>
+  <input type="text"  th:field="*{login}" placeholder="Введите логин" name="username" id="login">
+  <div style="color: red" th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></div>
+  </div>
+  <div>
+  <label for="password">Введите пароль: </label>
+  </div>
+  <div>
+  <input type="password" th:field="*{password}" placeholder="Введите пароль" name="password" id="password">
+  <div style="color: red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+  </div>
+  <div>
+  <input type="submit" value="Зарегистрироваться">
+  </div>
+</form>
+</div>
+<footer>
+  <div class="f">
+    <div>
+      Наш адрес: г. Нижний Новгород, 17 Сентября ул., д. 17
+    </div>
+    <div>
+      Телефон службы технической поддержки: +7 (981) 716-76-99, +7 (941) 707-60-18
+    </div>
+    <div>
+      Адрес электронной почты: liceilaunije-8344@mail.ru
+    </div>
+  </div>
+</footer>
+<div class='night-sky'>
+  <div class='star twinkle-star-1'></div>
+  <div class='star twinkle-star-2'></div>
+  <div class='star twinkle-star-3'></div>
+  <div class='star twinkle-star-4'></div>
+  <div class='star twinkle-star-5'></div>
+  <div class='star twinkle-star-6'></div>
+  <div class='star twinkle-star-7'></div>
+  <div class='star twinkle-star-8'></div>
+  <div class='star twinkle-star-9'></div>
+  <div class='star twinkle-star-10'></div>
+  <div class='star twinkle-star-11'></div>
+  <div class='star twinkle-star-12'></div>
+  <div class='star twinkle-star-13'></div>
+  <div class='star twinkle-star-14'></div>
+  <div class='star twinkle-star-15'></div>
+  <div class='star twinkle-star-16'></div>
+  <div class='star twinkle-star-17'></div>
+  <div class='star twinkle-star-18'></div>
+  <div class='star twinkle-star-19'></div>
+  <div class='star twinkle-star-20'></div>
+  <div class='star twinkle-star-21'></div>
+  <div class='star twinkle-star-22'></div>
+  <div class='star twinkle-star-23'></div>
+  <div class='star twinkle-star-24'></div>
+  <div class='star twinkle-star-25'></div>
+  <div class='star twinkle-star-26'></div>
+  <div class='star twinkle-star-27'></div>
+  <div class='star twinkle-star-28'></div>
+  <div class='star twinkle-star-29'></div>
+  <div class='star twinkle-star-30'></div>
+  <div class='star twinkle-star-31'></div>
+  <div class='star twinkle-star-32'></div>
+  <div class='star twinkle-star-33'></div>
+  <div class='star twinkle-star-34'></div>
+  <div class='star twinkle-star-35'></div>
+  <div class='star twinkle-star-36'></div>
+  <div class='star twinkle-star-37'></div>
+  <div class='star twinkle-star-38'></div>
+  <div class='star twinkle-star-39'></div>
+  <div class='star twinkle-star-40'></div>
+  <div class='star twinkle-star-41'></div>
+  <div class='star twinkle-star-42'></div>
+  <div class='star twinkle-star-43'></div>
+  <div class='star twinkle-star-44'></div>
+  <div class='star twinkle-star-45'></div>
+  <div class='star twinkle-star-46'></div>
+  <div class='star twinkle-star-47'></div>
+  <div class='star twinkle-star-48'></div>
+  <div class='star twinkle-star-49'></div>
+  <div class='star twinkle-star-50'></div>
+  <div class='star twinkle-star-51'></div>
+  <div class='star twinkle-star-52'></div>
+  <div class='star twinkle-star-53'></div>
+  <div class='star twinkle-star-54'></div>
+  <div class='star twinkle-star-55'></div>
+  <div class='star twinkle-star-56'></div>
+  <div class='star twinkle-star-57'></div>
+  <div class='star twinkle-star-58'></div>
+  <div class='star twinkle-star-59'></div>
+  <div class='star twinkle-star-60'></div>
+  <div class='star twinkle-star-61'></div>
+  <div class='star twinkle-star-62'></div>
+  <div class='star twinkle-star-63'></div>
+  <div class='star twinkle-star-64'></div>
+  <div class='star twinkle-star-65'></div>
+  <div class='star twinkle-star-66'></div>
+  <div class='star twinkle-star-67'></div>
+  <div class='star twinkle-star-68'></div>
+  <div class='star twinkle-star-69'></div>
+  <div class='star twinkle-star-70'></div>
+  <div class='star twinkle-star-71'></div>
+  <div class='star twinkle-star-72'></div>
+  <div class='star twinkle-star-73'></div>
+  <div class='star twinkle-star-74'></div>
+  <div class='star twinkle-star-75'></div>
+  <div class='star twinkle-star-76'></div>
+  <div class='star twinkle-star-77'></div>
+  <div class='star twinkle-star-78'></div>
+  <div class='star twinkle-star-79'></div>
+  <div class='star twinkle-star-80'></div>
+  <div class='star twinkle-star-81'></div>
+  <div class='star twinkle-star-82'></div>
+  <div class='star twinkle-star-83'></div>
+  <div class='star twinkle-star-84'></div>
+  <div class='star twinkle-star-85'></div>
+  <div class='star twinkle-star-86'></div>
+  <div class='star twinkle-star-87'></div>
+  <div class='star twinkle-star-88'></div>
+  <div class='star twinkle-star-89'></div>
+  <div class='star twinkle-star-90'></div>
+  <div class='star twinkle-star-91'></div>
+  <div class='star twinkle-star-92'></div>
+  <div class='star twinkle-star-93'></div>
+  <div class='star twinkle-star-94'></div>
+  <div class='star twinkle-star-95'></div>
+  <div class='star twinkle-star-96'></div>
+  <div class='star twinkle-star-97'></div>
+  <div class='star twinkle-star-98'></div>
+  <div class='star twinkle-star-99'></div>
+  <div class='star twinkle-star-100'></div>
+  <p class="star_text">
+    Телескопы Sky-Watcher
+  </p>
+</div>
+</body>
+</html>

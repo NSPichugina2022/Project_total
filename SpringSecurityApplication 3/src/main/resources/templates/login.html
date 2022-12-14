@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet" media="all"/>
+    <title>Авторизация</title>
+</head>
+<body>
+<header>
+    <div class="grid_login">
+    <div class="item-1">
+        <h1>StarLight</h1>
+    </div>
+    <div class="item-2">
+        <img class="photo1" th:src="@{/resources/static/img/for_header.jpg}" alt="Изображение">
+    </div>
+    <div class="item-3">
+        <a class="h" href="/product">Главная</a>
+    </div>
+    </div>
+</header>
+<main>
+<div class="auth">
+    <div>
+        <h3>Вход</h3>
+    </div>
+<form  method="post" action="/process_login">
+    <div>
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+    </div>
+    <div>
+    <label for="username">Введите логин: </label>
+    </div>
+    <div>
+    <input type="text" placeholder="Введите логин" name="username" id="username">
+    </div>
+    <div>
+    <label for="password">Введите пароль: </label>
+    </div>
+    <div>
+    <input type="password" placeholder="Введите пароль" name="password" id="password">
+    </div>
+    <div>
+    <input type="submit" value="Войти">
+    </div>
+    <div th:if="${param.error}" style="color: red">
+        Неправильный логин или пароль
+    </div>
+    <div>
+    <a class="au" href="/auth/registration">Регистрация</a>
+</div>
+</form>
+</div>
+    <div class='night-sky'>
+        <div class='star twinkle-star-1'></div>
+        <div class='star twinkle-star-2'></div>
+        <div class='star twinkle-star-3'></div>
+        <div class='star twinkle-star-4'></div>
+        <div class='star twinkle-star-5'></div>
+        <div class='star twinkle-star-6'></div>
+        <div class='star twinkle-star-7'></div>
+        <div class='star twinkle-star-8'></div>
+        <div class='star twinkle-star-9'></div>
+        <div class='star twinkle-star-10'></div>
+        <div class='star twinkle-star-11'></div>
+        <div class='star twinkle-star-12'></div>
+        <div class='star twinkle-star-13'></div>
+        <div class='star twinkle-star-14'></div>
+        <div class='star twinkle-star-15'></div>
+        <div class='star twinkle-star-16'></div>
+        <div class='star twinkle-star-17'></div>
+        <div class='star twinkle-star-18'></div>
+        <div class='star twinkle-star-19'></div>
+        <div class='star twinkle-star-20'></div>
+        <div class='star twinkle-star-21'></div>
+        <div class='star twinkle-star-22'></div>
+        <div class='star twinkle-star-23'></div>
+        <div class='star twinkle-star-24'></div>
+        <div class='star twinkle-star-25'></div>
+        <div class='star twinkle-star-26'></div>
+        <div class='star twinkle-star-27'></div>
+        <div class='star twinkle-star-28'></div>
+        <div class='star twinkle-star-29'></div>
+        <div class='star twinkle-star-30'></div>
+        <div class='star twinkle-star-31'></div>
+        <div class='star twinkle-star-32'></div>
+        <div class='star twinkle-star-33'></div>
+        <div class='star twinkle-star-34'></div>
+        <div class='star twinkle-star-35'></div>
+        <div class='star twinkle-star-36'></div>
+        <div class='star twinkle-star-37'></div>
+        <div class='star twinkle-star-38'></div>
+        <div class='star twinkle-star-39'></div>
+        <div class='star twinkle-star-40'></div>
+        <div class='star twinkle-star-41'></div>
+        <div class='star twinkle-star-42'></div>
+        <div class='star twinkle-star-43'></div>
+        <div class='star twinkle-star-44'></div>
+        <div class='star twinkle-star-45'></div>
+        <div class='star twinkle-star-46'></div>
+        <div class='star twinkle-star-47'></div>
+        <div class='star twinkle-star-48'></div>
+        <div class='star twinkle-star-49'></div>
+        <div class='star twinkle-star-50'></div>
+        <div class='star twinkle-star-51'></div>
+        <div class='star twinkle-star-52'></div>
+        <div class='star twinkle-star-53'></div>
+        <div class='star twinkle-star-54'></div>
+        <div class='star twinkle-star-55'></div>
+        <div class='star twinkle-star-56'></div>
+        <div class='star twinkle-star-57'></div>
+        <div class='star twinkle-star-58'></div>
+        <div class='star twinkle-star-59'></div>
+        <div class='star twinkle-star-60'></div>
+        <div class='star twinkle-star-61'></div>
+        <div class='star twinkle-star-62'></div>
+        <div class='star twinkle-star-63'></div>
+        <div class='star twinkle-star-64'></div>
+        <div class='star twinkle-star-65'></div>
+        <div class='star twinkle-star-66'></div>
+        <div class='star twinkle-star-67'></div>
+        <div class='star twinkle-star-68'></div>
+        <div class='star twinkle-star-69'></div>
+        <div class='star twinkle-star-70'></div>
+        <div class='star twinkle-star-71'></div>
+        <div class='star twinkle-star-72'></div>
+        <div class='star twinkle-star-73'></div>
+        <div class='star twinkle-star-74'></div>
+        <div class='star twinkle-star-75'></div>
+        <div class='star twinkle-star-76'></div>
+        <div class='star twinkle-star-77'></div>
+        <div class='star twinkle-star-78'></div>
+        <div class='star twinkle-star-79'></div>
+        <div class='star twinkle-star-80'></div>
+        <div class='star twinkle-star-81'></div>
+        <div class='star twinkle-star-82'></div>
+        <div class='star twinkle-star-83'></div>
+        <div class='star twinkle-star-84'></div>
+        <div class='star twinkle-star-85'></div>
+        <div class='star twinkle-star-86'></div>
+        <div class='star twinkle-star-87'></div>
+        <div class='star twinkle-star-88'></div>
+        <div class='star twinkle-star-89'></div>
+        <div class='star twinkle-star-90'></div>
+        <div class='star twinkle-star-91'></div>
+        <div class='star twinkle-star-92'></div>
+        <div class='star twinkle-star-93'></div>
+        <div class='star twinkle-star-94'></div>
+        <div class='star twinkle-star-95'></div>
+        <div class='star twinkle-star-96'></div>
+        <div class='star twinkle-star-97'></div>
+        <div class='star twinkle-star-98'></div>
+        <div class='star twinkle-star-99'></div>
+        <div class='star twinkle-star-100'></div>
+        <p class="star_text">
+            Телескопы Sky-Watcher
+        </p>
+    </div>
+    <div class="about"><h2>Оптические приборы Sky-Watcher от эксклюзивного поставщика в России</h2>
+    <p class="ab">Покупайте оптическую технику Sky-Watcher (Скай-Вотчер) у эксклюзивного дистрибьютора
+        Sky-Watcher (Скай-Вотчер) в России. Благодаря качественной оптике, выверенной механике
+        и высокоточным электронным компонентам приборы этой торговой марки популярны среди начинающих
+        пользователей и опытных астрономов во всем мире. Наш интернет-магазин телескопов
+        Sky-Watcher предлагает широкий ассортимент телескопов и монтировок для пользователей
+        любого уровня подготовки. Новичкам можно порекомендовать простые и удобные в управлении
+        азимутальные рефракторы, идеальные для первого знакомства с космосом. Продвинутые
+        пользователи оценят большой выбор рефлекторов и катадиоптриков на экваториальных монтировках,
+        а также моделей с автонаведением. Кроме того, у нас вы всегда сможете купить аксессуары
+        Sky-Watcher. Эксклюзивный поставщик Sky-Watcher (Скай-Вотчер) приглашает к сотрудничеству
+        дилеров со всей России.</p>
+        <h2>Sky-Watcher (Скай-Вотчер): телескопы, ОТА, монтировки, системы GOTO, оптические аксессуары</h2>
+        <p class="ab"> Мы предлагаем большой выбор оптической техники для визуальных наблюдений и астрофотографии.
+        Уровень подготовки пользователя не имеет значения: ассортимент Sky-Watcher включает приборы
+        как для начинающих, так и для опытных астрономов. В нашем интернет-магазине представлены рефракторы, рефлекторы и зеркально-линзовые телескопы, азимутальные и экваториальные монтировки, оптические аксессуары, а также системы автонаведения SynScan GOTO и другие принадлежности для оптической техники.
+
+        Наша компания – эксклюзивный поставщик Sky-Watcher: купить технику бренда можно не только непосредственно у нас, но и у дилеров, с которыми мы сотрудничаем. Полный список наших партнеров вы можете найти по ссылке. Только на нашем сайте и в этих магазинах представлены настоящие приборы Скайвотчер с официальной гарантией производителя. Не рекомендуем приобретать нашу технику у неофициальных дилеров, так как мы не можем подтвердить происхождение этих телескопов и аксессуаров.
+
+        Все телескопы, монтировки и сложные по устройству аксессуары Скай-Вотчер обязательно имеют инструкцию по эксплуатации. Она вкладывается в упаковочную коробку и является неотъемлемой частью комплектации. Также вы можете скачать необходимые инструкции на русском языке в разделе «Материалы». Кроме мануалов там публикуются ссылки на актуальные прошивки для систем автонаведения, информационные листовки, установочные файлы мобильных приложений для смартфонов и планшетов.
+
+        Рекомендуем обратить внимание на раздел «Обзоры» официального российского сайта Sky-Watcher – отзывы пользователей позволят составить наиболее полное представление о нашей оптической технике и аксессуарах. На этой странице размещаются не только текстовые статьи, но и видеоролики, которые дают возможность визуально изучить понравившиеся приборы Sky-Watcher, купить которые можно прямо здесь на сайте.
+
+        Не забывайте регулярно посещать страницу «Новости», чтобы быть в курсе планирующихся мероприятий, новых поступлений Sky-Watcher, цен на новинки и многого другого. За нашей деятельностью можно следить и в соцсетях.
+
+        Мы рады, что вы выбираете наши телескопы и аксессуары. Мы стремимся создавать лучшую астрономическую технику, постоянно совершенствуемся и стараемся быть с вами на связи. Для Sky-Watcher отзывы клиентов значат очень многое: опираясь на них, мы можем разрабатывать оптические приборы, которые полностью соответствуют вашим ожиданиям и позволяют получать максимально яркие впечатления. Также мы стремимся удерживать на технику Sky-Watcher цены на разумном уровне, чтобы каждый мог приобщиться к астрономическим наблюдениям и расширить свои представления об устройстве Вселенной.
+        </p>
+    </div>
+</main>
+<footer>
+    <div class="f">
+        <div>
+    Наш адрес: г. Нижний Новгород, 17 Сентября ул., д. 17
+        </div>
+        <div>
+    Телефон службы технической поддержки: +7 (981) 716-76-99, +7 (941) 707-60-18
+        </div>
+        <div>
+    Адрес электронной почты: liceilaunije-8344@mail.ru
+        </div>
+    </div>
+</footer>
+<script th:src="@{/js/index.js}"></script>
+</body>
+</html>

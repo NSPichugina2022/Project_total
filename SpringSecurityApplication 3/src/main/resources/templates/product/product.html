@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet" media="all"/>
+    <title>Главная</title>
+</head>
+<body>
+<header>
+    <div class="grid_login">
+        <div class="item-1">
+            <h1>StarLight</h1>
+        </div>
+        <div class="item-2">
+            <img class="photo1" th:src="@{/resources/static/img/for_header.jpg}" alt="Изображение">
+        </div>
+        <div class="item-3">
+            <a class="h" href="/product">Главная</a>
+        </div>
+        <div class="item-4">
+            <a class="h" href="/auth/login">Авторизация</a>
+        </div>
+    </div>
+</header>
+
+    <div class="el22">
+<form th:method="POST" th:action="@{/product/search}">
+    <div class="el21">
+    <fieldset>
+    <div class="el1">
+    <legend>Выберите параметры для сортировки, поиска и фильтрации:</legend>
+    </div>
+    <div class="el2">
+    <label for="search">Поиск по наименованию</label>
+    </div>
+    <div class="el3">
+    <input type="search" name="search"  th:value="*{value_search}" id="search">
+    </div>
+            <div class="el4">
+    <p>Цена, ₽</p>
+    </div>
+    <div class="el5">
+    <label for="ot">От</label>
+        </div>
+    <div class="el6">
+    <input type="text" name="ot"  th:value="*{value_price_ot}" id="ot">
+        </div>
+    <div class="el7">
+    <label for="do">До</label>
+        </div>
+    <div class="el8">
+    <input type="text" name="do"  th:value="*{value_price_do}" id="do">
+        </div>
+        <div class="el9">
+    <input type="radio" id="ascending_price" name="price" value="sorted_by_ascending_price">
+            </div>
+        <div class="el10">
+    <label for="ascending_price">Отсортировать по возрастанию цены</label>
+            </div>
+        <div class="el11">
+    <input type="radio" id="descending_price" name="price" value="sorted_by_descending_price">
+            </div>
+        <div class="el12">
+    <label for="descending_price">Отсортировать по убыванию цены</label>
+            </div>
+        <div class="el13">
+            <p>Категория товаров: </p>
+            </div>
+        <div class="el14">
+    <input type="radio" id="refractor" name="category" value="refractor">
+            </div>
+        <div class="el15">
+    <label for="refractor">Рефракторы</label>
+            </div>
+        <div class="el16">
+    <input type="radio" id="reflector" name="category" value="reflector">
+            </div>
+        <div class="el17">
+    <label for=reflector>Рефлекторы</label>
+            </div>
+        <div class="el18">
+    <input type="radio" id="lenses" name="category" value="lenses">
+            </div>
+        <div class="el19">
+    <label for="lenses">Линзы</label>
+            </div>
+
+        <div class="el20">
+    <input type="submit" value="Найти">
+            </div>
+</fieldset>
+    </div>
+</form>
+    </div>
+
+<div class="prod">
+<div class="prod1">
+<div>
+<h3>Результат: </h3>
+        </div>
+    <hr class="hr-horizontal-gradient">
+<div th:each="product : ${search_product}">
+    <div>
+    <img class="photo2" src="'/img/' + ${product.imageList[0].getFileName()}" width="300px" alt="Изображение">
+    </div>
+        <div>
+    <a th:href="@{/product/info/{id}(id=${product.getId()})}" th:text="${product.getTitle()}"></a>
+            </div>
+        <div>
+    <p th:text="'Цена: ' + ${product.getPrice()}"></p>
+            </div>
+    <hr class="hr-horizontal-gradient">
+</div>
+    </div>
+
+<div class="prod2">
+    <div>
+<h3>Доступные товары: </h3>
+</div>
+    <hr class="hr-horizontal-gradient">
+<div class="pr2" th:each="product : ${products}">
+    <div>
+    <img class="photo2" src="'/img/' + ${product.imageList[0].getFileName()}" width="300px" alt="Изображение">
+    </div>
+    <div>
+    <a th:href="@{/product/info/{id}(id=${product.getId()})}" th:text="${product.getTitle()}" id="title"></a>
+    </div>
+    <div>
+    <p th:text="'Цена: ' + ${product.getPrice()}"></p>
+    </div>
+    <hr class="hr-horizontal-gradient">
+</div>
+</div>
+</div>
+<footer>
+    <div class="f">
+        <div>
+            Наш адрес: г. Нижний Новгород, 17 Сентября ул., д. 17
+        </div>
+        <div>
+            Телефон службы технической поддержки: +7 (981) 716-76-99, +7 (941) 707-60-18
+        </div>
+        <div>
+            Адрес электронной почты: liceilaunije-8344@mail.ru
+        </div>
+    </div>
+</footer>
+</body>
+</html>
